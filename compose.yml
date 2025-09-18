@@ -6,10 +6,31 @@ services:
     container_name: redis
     ports:
       - "6379:6379"
+    networks:
+      - emqx-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis-init:
+    image: redis:7.4
+    container_name: redis-init
     volumes:
       - ./config/redis_acl_commands.txt:/tmp/redis_acl_commands.txt:ro
     networks:
       - emqx-net
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "
+        echo 'Loading ACL commands...' &&
+        redis-cli -h redis < /tmp/redis_acl_commands.txt &&
+        echo 'ACL commands loaded successfully'
+      "
+    restart: "no"
 
   emqx:
     image: emqx/emqx:4.4.19
@@ -32,7 +53,14 @@ services:
     networks:
       - emqx-net
     depends_on:
-      - redis
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/status"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
 
 networks:
   emqx-net:
