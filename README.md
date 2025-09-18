@@ -14,12 +14,19 @@ HSET mqtt_acl:a chat/a/0 3
 HSET mqtt_acl:b chat/b/0 3
 ```
 
-Feel free to modify/expand these ACLs if you want to test a different set of use cases (more clients, different topic names, etc).
-
-> NOTE: the last element in the ACL definition is as follows:
+> NOTE #1: the last element in the ACL definition is as follows:
 > - 1: subscribe
 > - 2: publish
 > - 3: pubsub
+
+The EMQX default credentials are as follows (password can be changed in `.env`):
+
+> - username: admin
+> - password: Adminadmin0
+
+Feel free to modify/expand these ACLs if you want to test a different set of use cases (more clients, different topic names, etc).
+
+
 
 ## MQTT client setup
 
