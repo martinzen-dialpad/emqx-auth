@@ -1,0 +1,3 @@
+HSET mqtt_acl:server chat/+/0 3
+HSET mqtt_acl:a chat/a/0 3
+HSET mqtt_acl:b chat/b/0 3

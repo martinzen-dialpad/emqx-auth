@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.4
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - emqx-net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis-init:
+    image: redis:7.4
+    container_name: redis-init
+    volumes:
+      - ./config/redis_acl_commands.txt:/tmp/redis_acl_commands.txt:ro
+    networks:
+      - emqx-net
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "
+        echo 'Loading ACL commands...' &&
+        redis-cli -h redis < /tmp/redis_acl_commands.txt &&
+        echo 'ACL commands loaded successfully'
+      "
+    restart: "no"
+
+  emqx:
+    image: emqx/emqx:4.4.19
+    container_name: emqx
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8084:8084"
+      - "8883:8883"
+      - "18083:18083"
+    environment:
+      - EMQX_DASHBOARD__DEFAULT_USER__PASSWORD=Adminadmin0
+      - EMQX_LOADED_PLUGINS=emqx_auth_jwt,emqx_auth_redis
+    volumes:
+      - ./config/acl.conf:/opt/emqx/etc/acl.conf:ro
+      - ./config/jwt_public_key.pem:/opt/emqx/etc/certs/jwt_public_key.pem:ro
+      - ./config/emqx.conf:/opt/emqx/etc/emqx.conf:ro
+      - ./config/emqx_auth_jwt.conf:/opt/emqx/etc/plugins/emqx_auth_jwt.conf:ro
+      - ./config/emqx_auth_redis.conf:/opt/emqx/etc/plugins/emqx_auth_redis.conf:ro
+    networks:
+      - emqx-net
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/status"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+networks:
+  emqx-net:
+    driver: bridge
