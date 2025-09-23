@@ -1,0 +1,20 @@
+[project]
+name = "emqx-rules"
+version = "0.1.0"
+description = "EMQX integration tests for MQTT authentication and authorization"
+authors = [
+    { name = "Martin Zenzerovich", email = "martin.zenzerovich@dialpad.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pytest>=7.0.0",
+    "paho-mqtt>=1.6.0",
+    "PyJWT>=2.6.0",
+    "cryptography>=3.4.8",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+python_files = "test_*.py"
+addopts = ["-v", "-s"]
