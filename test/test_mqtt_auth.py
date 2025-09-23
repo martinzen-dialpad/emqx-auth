@@ -104,7 +104,8 @@ class TestMQTTAuthentication:
             "connected": False,
             "result_code": None,
             "subscriptions": {},
-            "publications": {}
+            "publications": {},
+            "messages": []
         }
 
         def on_connect(client, userdata, flags, rc, properties):
@@ -124,11 +125,21 @@ class TestMQTTAuthentication:
             """Callback for publish events."""
             connection_result["publications"][mid] = {"success": True}
 
+        def on_message(client, userdata, message):
+            """Callback for received messages."""
+            connection_result["messages"].append({
+                "topic": message.topic,
+                "payload": message.payload.decode(),
+                "qos": message.qos,
+                "retain": message.retain
+            })
+
         # Create MQTT client with callback API VERSION2
         client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id=client_id)
         client.on_connect = on_connect
         client.on_subscribe = on_subscribe
         client.on_publish = on_publish
+        client.on_message = on_message
 
         # Set credentials
         client.username_pw_set(username, password)
@@ -353,6 +364,92 @@ class TestMQTTAuthentication:
         finally:
             client.loop_stop()
             client.disconnect()
+
+    def test_multi_client_message_delivery(self):
+        """
+        Test message delivery between multiple clients.
+
+        This test:
+        1. Connects with client "server" and validates it succeeds
+        2. Subscribes client "server" to topic "chat/a/0", validates it succeeds
+        3. Connects with client "a"
+        4. Makes client "a" publish to topic "chat/a/0", validates it succeeds
+        5. Validates that client "server" receives message published by client "a"
+        """
+        # Create JWT tokens for both users
+        server_jwt = self.create_jwt_token("server")
+        user_a_jwt = self.create_jwt_token("a")
+
+        # Create and connect server client
+        server_client, server_result = self.create_client_and_connect("server", server_jwt)
+
+        try:
+            # Step 1: Connect server client
+            print("Step 1: Connecting server client")
+            server_client.connect(self.MQTT_HOST, self.MQTT_PORT, 10)
+            server_client.loop_start()
+            time.sleep(2)
+
+            assert server_result["connected"], f"Server connection failed with result code: {server_result['result_code']}"
+            print("✓ Server client connected successfully")
+
+            # Step 2: Subscribe server to topic chat/a/0
+            print("Step 2: Subscribing server to chat/a/0")
+            topic = "chat/a/0"
+            result, mid = server_client.subscribe(topic, 0)
+            time.sleep(1)
+
+            assert result == mqtt.MQTT_ERR_SUCCESS, f"Server subscribe call failed: {result}"
+            assert mid in server_result["subscriptions"], f"No subscription callback for server"
+            assert server_result["subscriptions"][mid]["success"], f"Server subscription should have succeeded"
+            print("✓ Server subscribed to chat/a/0 successfully")
+
+            # Step 3: Create and connect user 'a' client
+            print("Step 3: Connecting user 'a' client")
+            user_a_client, user_a_result = self.create_client_and_connect("a", user_a_jwt)
+
+            user_a_client.connect(self.MQTT_HOST, self.MQTT_PORT, 10)
+            user_a_client.loop_start()
+            time.sleep(2)
+
+            assert user_a_result["connected"], f"User 'a' connection failed with result code: {user_a_result['result_code']}"
+            print("✓ User 'a' client connected successfully")
+
+            # Step 4: Make user 'a' publish to chat/a/0
+            print("Step 4: User 'a' publishing to chat/a/0")
+            test_message = "Hello from user a!"
+            pub_info = user_a_client.publish(topic, test_message, 0)
+            time.sleep(1)
+
+            assert pub_info.mid in user_a_result["publications"], f"No publish callback for user 'a'"
+            assert user_a_result["publications"][pub_info.mid]["success"], f"User 'a' publish should have succeeded"
+            print("✓ User 'a' published message successfully")
+
+            # Step 5: Validate server receives the message
+            print("Step 5: Validating server received the message")
+            time.sleep(2)  # Give some extra time for message delivery
+
+            assert len(server_result["messages"]) > 0, "Server should have received at least one message"
+
+            # Find the message we sent
+            received_message = None
+            for msg in server_result["messages"]:
+                if msg["topic"] == topic and msg["payload"] == test_message:
+                    received_message = msg
+                    break
+
+            assert received_message is not None, f"Server did not receive the expected message. Received messages: {server_result['messages']}"
+            assert received_message["topic"] == topic, f"Expected topic {topic}, got {received_message['topic']}"
+            assert received_message["payload"] == test_message, f"Expected payload '{test_message}', got '{received_message['payload']}'"
+
+            print(f"✓ Server successfully received message: '{received_message['payload']}' on topic '{received_message['topic']}'")
+
+        finally:
+            server_client.loop_stop()
+            server_client.disconnect()
+            if 'user_a_client' in locals():
+                user_a_client.loop_stop()
+                user_a_client.disconnect()
 
 
 if __name__ == "__main__":
