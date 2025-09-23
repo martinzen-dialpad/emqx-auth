@@ -59,3 +59,41 @@ The EMQX container is configured to use the public key to validate the signature
 ### MQTT pub/sub
 
 Once a client connection is established try subscribing and/or publishing to the topics that the client is authorized to interact with in the ACLs you pushed to Redis.
+
+## Testing
+
+This repository includes a comprehensive integration test suite that validates MQTT authentication and authorization functionality. The tests cover:
+
+- **Authentication**: JWT token validation and connection handling
+- **Authorization**: ACL-based topic access control for different users
+- **Message Delivery**: End-to-end message flow between multiple clients
+
+### Prerequisites
+
+- [uv](https://docs.astral.sh/uv/) - Python package manager
+- Docker or Podman for running the MQTT container stack
+
+### Running Tests
+
+The test suite uses a simple Makefile workflow:
+
+```bash
+# 1. Start the MQTT container stack (EMQX + Redis)
+make start
+
+# 2. Run the integration tests
+make test
+
+# 3. Tear down the MQTT container stack
+make stop
+```
+
+The test suite includes:
+
+- Failed authentication with empty credentials
+- Successful authentication with valid JWT tokens
+- Server authorization for multiple topic subscriptions
+- User authorization with publish/subscribe operations
+- Multi-client message delivery validation
+
+Test results include detailed output showing JWT token generation, connection status, and step-by-step validation of each operation.
