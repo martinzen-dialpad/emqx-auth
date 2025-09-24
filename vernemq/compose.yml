@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  vernemq.master:
+    image: vernemq/vernemq:latest
+    container_name: vernemq.master
+    ports:
+      - 8888:8888
+      - 8080:8080
+      - 1883:1883
+    environment:
+      - DOCKER_VERNEMQ_ACCEPT_EULA=yes
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+networks:
+  vernemq-net:
+    driver: bridge
