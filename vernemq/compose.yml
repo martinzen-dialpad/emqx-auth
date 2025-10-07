@@ -15,6 +15,33 @@ services:
     networks:
       - vernemq-net
 
+  # redis:
+  #   image: redis:${REDIS_VERSION}
+  #   container_name: redis
+  #   ports:
+  #     - 6379:6379
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 5s
+  #     timeout: 3s
+  #     retries: 5
+
+  # redis-init:
+  #   image: redis:${REDIS_VERSION}
+  #   container_name: redis-init
+  #   volumes:
+  #     - ./redis_acl_commands.txt:/tmp/redis_acl_commands.txt:ro
+  #   depends_on:
+  #     redis:
+  #       condition: service_healthy
+  #   command: >
+  #     sh -c "
+  #       echo 'Loading ACL commands...' &&
+  #       redis-cli -h redis < /tmp/redis_acl_commands.txt &&
+  #       echo 'ACL commands loaded successfully'
+  #     "
+  #   restart: "no"
+
   vernemq.master:
     image: vernemq/vernemq:latest
     container_name: vernemq.master
@@ -25,6 +52,13 @@ services:
       - DOCKER_VERNEMQ_PLUGINS__VMQ_PASSWD=off
       - DOCKER_VERNEMQ_PLUGINS__VMQ_ACL=off
       - DOCKER_VERNEMQ_PLUGINS__VMQ_WEBHOOKS=on
+      # - DOCKER_VERNEMQ_PLUGINS__VMQ_DIVERSITY=on
+      # - DOCKER_VERNEMQ_PLUGINS__VMQ_WEBHOOKS__PRIORITY = 1
+      # - DOCKER_VERNEMQ_PLUGINS__VMQ_DIVERSITY__PRIORITY = 2
+      # - DOCKER_VERNEMQ_VMQ_DIVERSITY__AUTH_REDIS__ENABLED=on
+      # - DOCKER_VERNEMQ_VMQ_DIVERSITY__REDIS__HOST=redis
+      # - DOCKER_VERNEMQ_VMQ_DIVERSITY__REDIS__PORT=6379
+
       - DOCKER_VERNEMQ_VMQ_WEBHOOKS__AUTH_ON_REGISTER_M5__HOOK=auth_on_register_m5
       - DOCKER_VERNEMQ_VMQ_WEBHOOKS__AUTH_ON_SUBSCRIBE_M5__HOOK=auth_on_subscribe_m5
       - DOCKER_VERNEMQ_VMQ_WEBHOOKS__AUTH_ON_PUBLISH_M5__HOOK=auth_on_publish_m5
@@ -35,6 +69,8 @@ services:
       - DOCKER_VERNEMQ_VMQ_WEBHOOKS__AUTH_ON_PUBLISH_M5__ENDPOINT=${VERNEMQ_WEBHOOK_URL}
       - DOCKER_VERNEMQ_VMQ_WEBHOOKS__ON_CLIENT_GONE__ENDPOINT=${VERNEMQ_WEBHOOK_URL}
       - DOCKER_VERNEMQ_VMQ_WEBHOOKS__ON_CLIENT_OFFLINE__ENDPOINT=${VERNEMQ_WEBHOOK_URL}
+    # volumes:
+    #   - ./redis.lua:/vernemq/share/lua/auth/redis.lua
     depends_on:
       - webhook_server
     ports:
