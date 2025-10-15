@@ -1,0 +1,3 @@
+SET "[\"\",\"*\",\"server\"]" "{\"publish_acl\":[{\"pattern\":\"chat/+/0\"}],\"subscribe_acl\":[{\"pattern\":\"chat/+/0\"}]}"
+SET "[\"\",\"*\",\"a\"]" "{\"publish_acl\":[{\"pattern\":\"chat/a/0\"}],\"subscribe_acl\":[{\"pattern\":\"chat/a/0\"}]}"
+SET "[\"\",\"*\",\"b\"]" "{\"publish_acl\":[{\"pattern\":\"chat/b/0\"}],\"subscribe_acl\":[{\"pattern\":\"chat/b/0\"}]}"

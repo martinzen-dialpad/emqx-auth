@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   redis:
-    image: redis:7.4
+    image: redis:${REDIS_VERSION}
     container_name: redis
     ports:
       - "6379:6379"
@@ -13,7 +13,7 @@ services:
       retries: 5
 
   redis-init:
-    image: redis:7.4
+    image: redis:${REDIS_VERSION}
     container_name: redis-init
     volumes:
       - ./config/redis_acl_commands.txt:/tmp/redis_acl_commands.txt:ro
@@ -29,7 +29,7 @@ services:
     restart: "no"
 
   emqx.master:
-    image: emqx/emqx:4.4.19
+    image: emqx/emqx:${EMXQ_VERSION}
     container_name: emqx.master
     ports:
       - "1883:1883"
@@ -63,7 +63,7 @@ services:
       start_period: 30s
 
   emqx.worker:
-    image: emqx/emqx:4.4.19
+    image: emqx/emqx:${EMXQ_VERSION}
     container_name: emqx.worker
     environment:
       - EMQX_LOADED_PLUGINS=emqx_recon,emqx_retainer,emqx_management,emqx_web_hook,emqx_rule_engine,emqx_telemetry,emqx_auth_jwt,emqx_auth_redis
