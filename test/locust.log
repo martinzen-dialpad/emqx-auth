@@ -1,0 +1,2017 @@
+[2025-11-06 09:54:32,087] martin-FQGDXM6R0H/INFO/locust.main: Starting Locust 2.42.2
+[2025-11-06 09:54:32,091] martin-FQGDXM6R0H/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-11-06 09:54:36,040] martin-FQGDXM6R0H/INFO/locust.main: Shutting down (exit code 0)
+[2025-11-06 09:54:45,426] martin-FQGDXM6R0H/INFO/locust.main: Starting Locust 2.42.2
+[2025-11-06 09:54:45,430] martin-FQGDXM6R0H/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-11-06 11:02:39,762] martin-FQGDXM6R0H/INFO/locust.main: Shutting down (exit code 0)
+[2025-11-06 15:33:13,018] martin-FQGDXM6R0H/INFO/locust.main: Starting Locust 2.42.2
+[2025-11-06 15:33:13,023] martin-FQGDXM6R0H/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-11-06 15:33:48,202] martin-FQGDXM6R0H/INFO/locust.runners: Ramping to 100 users at a rate of 2.00 per second
+[2025-11-06 15:34:37,317] martin-FQGDXM6R0H/INFO/locust.runners: All users spawned: {"EMQXUser": 100} (100 total users)
+[2025-11-06 15:34:40,732] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-4fa400bd | Username: loadtest-4fa400bd | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-4fa400bd | Username: loadtest-4fa400bd | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:40,807] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a6a13928 | Username: loadtest-a6a13928 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a6a13928 | Username: loadtest-a6a13928 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:40,809] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-dd42a8ef | Username: loadtest-dd42a8ef | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-dd42a8ef | Username: loadtest-dd42a8ef | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:40,986] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-3b176296 | Username: loadtest-3b176296 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-3b176296 | Username: loadtest-3b176296 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:40,995] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-422f59ea | Username: loadtest-422f59ea | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-422f59ea | Username: loadtest-422f59ea | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,026] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-cb2cb25f | Username: loadtest-cb2cb25f | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-cb2cb25f | Username: loadtest-cb2cb25f | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,027] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d7883f08 | Username: loadtest-d7883f08 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d7883f08 | Username: loadtest-d7883f08 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,028] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-51442a13 | Username: loadtest-51442a13 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-51442a13 | Username: loadtest-51442a13 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,029] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-59c83efc | Username: loadtest-59c83efc | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-59c83efc | Username: loadtest-59c83efc | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,030] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-eb56697a | Username: loadtest-eb56697a | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-eb56697a | Username: loadtest-eb56697a | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,031] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-85575baa | Username: loadtest-85575baa | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-85575baa | Username: loadtest-85575baa | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,032] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-f16d998d | Username: loadtest-f16d998d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-f16d998d | Username: loadtest-f16d998d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,032] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-bf3dcc87 | Username: loadtest-bf3dcc87 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-bf3dcc87 | Username: loadtest-bf3dcc87 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,033] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0a8d5792 | Username: loadtest-0a8d5792 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0a8d5792 | Username: loadtest-0a8d5792 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,263] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-2cc8f45f | Username: loadtest-2cc8f45f | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-2cc8f45f | Username: loadtest-2cc8f45f | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,264] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-c2a66ca6 | Username: loadtest-c2a66ca6 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-c2a66ca6 | Username: loadtest-c2a66ca6 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,265] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-3ff5e57b | Username: loadtest-3ff5e57b | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-3ff5e57b | Username: loadtest-3ff5e57b | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,265] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-fb9fdf53 | Username: loadtest-fb9fdf53 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-fb9fdf53 | Username: loadtest-fb9fdf53 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,269] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-e95a1c0c | Username: loadtest-e95a1c0c | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-e95a1c0c | Username: loadtest-e95a1c0c | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,270] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-e413130d | Username: loadtest-e413130d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-e413130d | Username: loadtest-e413130d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,271] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-9d572ef2 | Username: loadtest-9d572ef2 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-9d572ef2 | Username: loadtest-9d572ef2 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,274] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d0953263 | Username: loadtest-d0953263 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d0953263 | Username: loadtest-d0953263 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,277] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-6bfbd9b5 | Username: loadtest-6bfbd9b5 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-6bfbd9b5 | Username: loadtest-6bfbd9b5 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,278] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-f19d4df1 | Username: loadtest-f19d4df1 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-f19d4df1 | Username: loadtest-f19d4df1 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,280] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-bd7b47b7 | Username: loadtest-bd7b47b7 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-bd7b47b7 | Username: loadtest-bd7b47b7 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,283] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-6ca69745 | Username: loadtest-6ca69745 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-6ca69745 | Username: loadtest-6ca69745 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,285] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-7887f5ec | Username: loadtest-7887f5ec | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-7887f5ec | Username: loadtest-7887f5ec | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,286] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-bed843aa | Username: loadtest-bed843aa | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-bed843aa | Username: loadtest-bed843aa | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,286] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-61e1e13c | Username: loadtest-61e1e13c | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-61e1e13c | Username: loadtest-61e1e13c | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,329] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a5b483b4 | Username: loadtest-a5b483b4 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a5b483b4 | Username: loadtest-a5b483b4 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,329] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b15d05ea | Username: loadtest-b15d05ea | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b15d05ea | Username: loadtest-b15d05ea | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,338] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-af43d785 | Username: loadtest-af43d785 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-af43d785 | Username: loadtest-af43d785 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,409] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-41c5974a | Username: loadtest-41c5974a | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-41c5974a | Username: loadtest-41c5974a | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,416] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-84703a4a | Username: loadtest-84703a4a | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-84703a4a | Username: loadtest-84703a4a | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,416] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-489947fa | Username: loadtest-489947fa | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-489947fa | Username: loadtest-489947fa | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:41,468] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-de53fe12 | Username: loadtest-de53fe12 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-de53fe12 | Username: loadtest-de53fe12 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:42,645] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-a11313ef | Username: loadtest-a11313ef | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-a11313ef | Username: loadtest-a11313ef | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:42,955] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b2b3ed90 | Username: loadtest-b2b3ed90 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b2b3ed90 | Username: loadtest-b2b3ed90 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:42,973] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-add6426d | Username: loadtest-add6426d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-add6426d | Username: loadtest-add6426d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:42,975] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0102f482 | Username: loadtest-0102f482 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0102f482 | Username: loadtest-0102f482 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:42,984] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-eea06735 | Username: loadtest-eea06735 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-eea06735 | Username: loadtest-eea06735 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:42,986] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-7393e369 | Username: loadtest-7393e369 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-7393e369 | Username: loadtest-7393e369 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:42,989] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-3ee35010 | Username: loadtest-3ee35010 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-3ee35010 | Username: loadtest-3ee35010 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,139] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-9fe2518c | Username: loadtest-9fe2518c | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-9fe2518c | Username: loadtest-9fe2518c | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,140] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-768ef9d2 | Username: loadtest-768ef9d2 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-768ef9d2 | Username: loadtest-768ef9d2 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,277] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-da26a49f | Username: loadtest-da26a49f | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-da26a49f | Username: loadtest-da26a49f | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,355] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-e7bf0157 | Username: loadtest-e7bf0157 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-e7bf0157 | Username: loadtest-e7bf0157 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,357] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-94b371c6 | Username: loadtest-94b371c6 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-94b371c6 | Username: loadtest-94b371c6 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,370] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-28106542 | Username: loadtest-28106542 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-28106542 | Username: loadtest-28106542 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,479] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-1adb16ce | Username: loadtest-1adb16ce | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-1adb16ce | Username: loadtest-1adb16ce | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,482] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-9b3d0e01 | Username: loadtest-9b3d0e01 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-9b3d0e01 | Username: loadtest-9b3d0e01 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,575] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a26d2734 | Username: loadtest-a26d2734 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a26d2734 | Username: loadtest-a26d2734 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:43,584] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-ec73fb8d | Username: loadtest-ec73fb8d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-ec73fb8d | Username: loadtest-ec73fb8d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,140] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-2f4e1f0b | Username: loadtest-2f4e1f0b | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-2f4e1f0b | Username: loadtest-2f4e1f0b | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,141] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-ec69df5f | Username: loadtest-ec69df5f | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-ec69df5f | Username: loadtest-ec69df5f | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,145] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-8d83eabe | Username: loadtest-8d83eabe | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-8d83eabe | Username: loadtest-8d83eabe | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,146] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d045dd8f | Username: loadtest-d045dd8f | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d045dd8f | Username: loadtest-d045dd8f | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,147] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d0bdff2b | Username: loadtest-d0bdff2b | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d0bdff2b | Username: loadtest-d0bdff2b | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,148] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0df2eb65 | Username: loadtest-0df2eb65 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0df2eb65 | Username: loadtest-0df2eb65 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,149] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-73386579 | Username: loadtest-73386579 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-73386579 | Username: loadtest-73386579 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,150] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-6671f351 | Username: loadtest-6671f351 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-6671f351 | Username: loadtest-6671f351 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,151] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b4916088 | Username: loadtest-b4916088 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b4916088 | Username: loadtest-b4916088 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,152] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-2a5387b5 | Username: loadtest-2a5387b5 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-2a5387b5 | Username: loadtest-2a5387b5 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,153] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0929777f | Username: loadtest-0929777f | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-0929777f | Username: loadtest-0929777f | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,154] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-09f297f7 | Username: loadtest-09f297f7 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-09f297f7 | Username: loadtest-09f297f7 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,155] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-844a9194 | Username: loadtest-844a9194 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-844a9194 | Username: loadtest-844a9194 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,157] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-0f5c4af8 | Username: loadtest-0f5c4af8 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-0f5c4af8 | Username: loadtest-0f5c4af8 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,158] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-fb73d5b2 | Username: loadtest-fb73d5b2 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-fb73d5b2 | Username: loadtest-fb73d5b2 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,159] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-44b93a5f | Username: loadtest-44b93a5f | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-44b93a5f | Username: loadtest-44b93a5f | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,160] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-2b26ef0d | Username: loadtest-2b26ef0d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-2b26ef0d | Username: loadtest-2b26ef0d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,160] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-20617b7c | Username: loadtest-20617b7c | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-20617b7c | Username: loadtest-20617b7c | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,161] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-cd365f1c | Username: loadtest-cd365f1c | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-cd365f1c | Username: loadtest-cd365f1c | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,162] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-60a72597 | Username: loadtest-60a72597 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-60a72597 | Username: loadtest-60a72597 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,163] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-f5cb97bc | Username: loadtest-f5cb97bc | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-f5cb97bc | Username: loadtest-f5cb97bc | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,163] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d79a1aae | Username: loadtest-d79a1aae | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-d79a1aae | Username: loadtest-d79a1aae | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,166] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a0c81c51 | Username: loadtest-a0c81c51 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a0c81c51 | Username: loadtest-a0c81c51 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,166] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-6c5c03e6 | Username: loadtest-6c5c03e6 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-6c5c03e6 | Username: loadtest-6c5c03e6 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,167] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-f7d21d2d | Username: loadtest-f7d21d2d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-f7d21d2d | Username: loadtest-f7d21d2d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,168] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-05099fa6 | Username: loadtest-05099fa6 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-05099fa6 | Username: loadtest-05099fa6 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,168] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-9ac03303 | Username: loadtest-9ac03303 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-9ac03303 | Username: loadtest-9ac03303 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,169] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-25ac685d | Username: loadtest-25ac685d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-25ac685d | Username: loadtest-25ac685d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,169] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-c5477de6 | Username: loadtest-c5477de6 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-c5477de6 | Username: loadtest-c5477de6 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,169] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-fbe4f319 | Username: loadtest-fbe4f319 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-fbe4f319 | Username: loadtest-fbe4f319 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,170] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-4121f7b2 | Username: loadtest-4121f7b2 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-4121f7b2 | Username: loadtest-4121f7b2 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:44,340] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a7a22d13 | Username: loadtest-a7a22d13 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-a7a22d13 | Username: loadtest-a7a22d13 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:45,316] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-3bc2a00a | Username: loadtest-3bc2a00a | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-3bc2a00a | Username: loadtest-3bc2a00a | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:45,317] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-273af812 | Username: loadtest-273af812 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-273af812 | Username: loadtest-273af812 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:45,318] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-86c46594 | Username: loadtest-86c46594 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-86c46594 | Username: loadtest-86c46594 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:45,319] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-33433efa | Username: loadtest-33433efa | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-33433efa | Username: loadtest-33433efa | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:45,320] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b2a39169 | Username: loadtest-b2a39169 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b2a39169 | Username: loadtest-b2a39169 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:45,333] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-a804787e | Username: loadtest-a804787e | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-a804787e | Username: loadtest-a804787e | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:45,334] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-80348a4d | Username: loadtest-80348a4d | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-80348a4d | Username: loadtest-80348a4d | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:46,389] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-55813937 | Username: loadtest-55813937 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-55813937 | Username: loadtest-55813937 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:46,396] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b2679c61 | Username: loadtest-b2679c61 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-b2679c61 | Username: loadtest-b2679c61 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:46,497] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-743e1d9b | Username: loadtest-743e1d9b | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-743e1d9b | Username: loadtest-743e1d9b | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:47,144] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-5e160e60 | Username: loadtest-5e160e60 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-5e160e60 | Username: loadtest-5e160e60 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:47,382] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-df814d76 | Username: loadtest-df814d76 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-df814d76 | Username: loadtest-df814d76 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:47,385] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-406a72e7 | Username: loadtest-406a72e7 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-406a72e7 | Username: loadtest-406a72e7 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:47,393] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-afb6bad2 | Username: loadtest-afb6bad2 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1884 | Client ID: loadtest-afb6bad2 | Username: loadtest-afb6bad2 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:34:47,394] martin-FQGDXM6R0H/ERROR/locust.user.task: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-037b2326 | Username: loadtest-037b2326 | Error: Connection timeout (no response from broker)
+Traceback (most recent call last):
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 355, in run
+    self.execute_next_task()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 388, in execute_next_task
+    self.execute_task(self._task_queue.popleft())
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/.venv/lib/python3.13/site-packages/locust/user/task.py", line 505, in execute_task
+    task(self.user)
+    ~~~~^^^^^^^^^^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 287, in mqtt_workflow
+    self._connect_to_emqx()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 406, in _connect_to_emqx
+    raise enhanced_exception
+  File "/Users/martin/Develop/test/emqx-rules/test/load_test.py", line 376, in _connect_to_emqx
+    raise Exception(error_message)
+Exception: Failed to connect to EMQX at localhost:1883 | Client ID: loadtest-037b2326 | Username: loadtest-037b2326 | Error: Connection timeout (no response from broker)
+
+[2025-11-06 15:43:03,286] martin-FQGDXM6R0H/INFO/locust.runners: Ramping to 10 users at a rate of 1.00 per second
+[2025-11-06 15:43:12,307] martin-FQGDXM6R0H/INFO/locust.runners: All users spawned: {"EMQXUser": 10} (10 total users)
+[2025-11-06 15:50:24,241] martin-FQGDXM6R0H/INFO/locust.main: Shutting down (exit code 0)
+[2025-11-06 15:50:39,973] martin-FQGDXM6R0H/INFO/locust.main: Starting Locust 2.42.2
+[2025-11-06 15:50:39,979] martin-FQGDXM6R0H/INFO/locust.main: Starting web interface at http://0.0.0.0:8089, press enter to open your default browser.
+[2025-11-06 15:50:51,955] martin-FQGDXM6R0H/INFO/locust.runners: Ramping to 10 users at a rate of 1.00 per second
+[2025-11-06 15:51:00,978] martin-FQGDXM6R0H/INFO/locust.runners: All users spawned: {"EMQXUser": 10} (10 total users)

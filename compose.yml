@@ -65,6 +65,8 @@ services:
   emqx.worker:
     image: emqx/emqx:${EMXQ_VERSION}
     container_name: emqx.worker
+    ports:
+      - "1884:1883"
     environment:
       - EMQX_LOADED_PLUGINS=emqx_recon,emqx_retainer,emqx_management,emqx_web_hook,emqx_rule_engine,emqx_telemetry,emqx_auth_jwt,emqx_auth_redis
       - EMQX_LOG__LEVEL=info

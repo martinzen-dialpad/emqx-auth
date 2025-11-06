@@ -12,6 +12,8 @@ dependencies = [
     "PyJWT>=2.6.0",
     "cryptography>=3.4.8",
     "python-dotenv>=1.0.0",
+    "locust>=2.42.2",
+    "redis>=5.0.0",
 ]
 
 [tool.pytest.ini_options]
