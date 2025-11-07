@@ -32,7 +32,6 @@ services:
     image: emqx/emqx:${EMXQ_VERSION}
     container_name: emqx.master
     ports:
-      - "1883:1883"
       - "8083:8083"
       - "8084:8084"
       - "8883:8883"
@@ -65,8 +64,6 @@ services:
   emqx.worker:
     image: emqx/emqx:${EMXQ_VERSION}
     container_name: emqx.worker
-    ports:
-      - "1884:1883"
     environment:
       - EMQX_LOADED_PLUGINS=emqx_recon,emqx_retainer,emqx_management,emqx_web_hook,emqx_rule_engine,emqx_telemetry,emqx_auth_jwt,emqx_auth_redis
       - EMQX_LOG__LEVEL=info
@@ -91,6 +88,21 @@ services:
       timeout: 5s
       retries: 3
       start_period: 30s
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: emqx-lb
+    ports:
+      - "1883:1883"    # MQTT load balanced endpoint
+      - "8404:8404"    # NGINX status page
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      emqx.master:
+        condition: service_healthy
+      emqx.worker:
+        condition: service_healthy
+    restart: unless-stopped
 
 networks:
   emqx-net:

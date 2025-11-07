@@ -120,6 +120,10 @@ JWT_PRIVATE_KEY_PATH=config/jwt_private_key.pem
 # Load Test Behavior
 MAX_MESSAGES_PER_USER=20   # Maximum messages each user will send (default: 20)
 MESSAGE_WAIT_TIME=0.5      # Seconds to wait between messages (default: 0.5, use 0 for no wait)
+
+# Cross-Node Test Behavior
+ENABLE_CROSS_NODE_TEST=true   # Enable cross-node message routing tests (default: true)
+CROSS_NODE_TEST_WEIGHT=1      # Task weight for cross-node tests relative to main task (default: 1)
 ```
 
 **Connection Distribution**: The load test will randomly distribute connections between `MQTT_HOST:MQTT_PORT` (master) and `MQTT_HOST:MQTT_WORKER_PORT` (worker) to simulate cluster load balancing.
@@ -128,6 +132,16 @@ MESSAGE_WAIT_TIME=0.5      # Seconds to wait between messages (default: 0.5, use
 - Each user sends up to `MAX_MESSAGES_PER_USER` messages, then stops
 - `MESSAGE_WAIT_TIME` controls the pause between messages (0 = rapid-fire, 0.5 = one message every 500ms)
 - With 10 users and MAX_MESSAGES_PER_USER=20, you'll see exactly **200 total messages** (10 users × 20 messages)
+
+**Cross-Node Testing**:
+- When enabled, adds an additional task that explicitly tests cross-node message routing
+- All users subscribe to a shared broadcast topic (`chat/broadcast/loadtest`) in addition to their unique topics
+- Users randomly publish to the broadcast topic, forcing messages to route between cluster nodes
+- `CROSS_NODE_TEST_WEIGHT` controls how often cross-node tests run relative to same-node tests:
+  - Weight = 1 (default): ~9% of operations are cross-node (1 out of 11)
+  - Weight = 5: ~33% of operations are cross-node (5 out of 15)
+  - Weight = 10: ~50% of operations are cross-node (10 out of 20)
+- Separate metrics track cross-node latency vs same-node latency for performance comparison
 
 ### Locust Configuration
 
@@ -151,13 +165,15 @@ run-time = 1m          # Test duration
 4. **Message Routing**: Ensures pub/sub works correctly under high message throughput
 5. **End-to-End Latency**: Measures time from publish to receive for each message
 6. **Message Throughput**: Tests how many messages per second can be processed on persistent connections
+7. **Cross-Node Message Routing**: Explicitly validates that messages published to one node are correctly routed to subscribers on other nodes
 
 ### Metrics Reported
 
-- **Request stats**: Success/failure rates for each operation (CONNECT, SUBSCRIBE, PUBLISH, RECEIVE)
+- **Request stats**: Success/failure rates for each operation (CONNECT, SUBSCRIBE, PUBLISH, RECEIVE, CROSS_NODE_PUBLISH, CROSS_NODE_RECEIVE)
 - **Response times**: 50th, 66th, 75th, 80th, 90th, 95th, 98th, 99th, 99.9th, 99.99th, 100th percentiles
 - **Requests per second**: Throughput for each operation
 - **Failures**: Detailed error messages for any failures
+- **Cross-Node Latency**: Separate tracking for cross-node message latency vs same-node latency
 
 ## Interpreting Results
 
@@ -169,25 +185,30 @@ A successful load test should show:
 - ✅ Stable RPS (requests per second) throughout the test
 - ✅ End-to-end latency under acceptable threshold (typically < 100ms for local testing)
 
-### Example Output (10 users, 15 seconds)
+### Example Output (10 users, 30 seconds, with cross-node testing)
 
 ```
-Type     Name                       # reqs      # fails  |     Avg     Min     Max  Median  |   req/s
---------|-------------------------|-----------|----------|------------|--------------------------|--------
-MQTT     CONNECT                      10          0      |     106     102     114     110   |    0.72
-Redis    HSET ACL                     10          0      |       4       2       8       4   |    0.72
-MQTT     SUBSCRIBE                    10          0      |     100     100     101     100   |    0.72
-MQTT     PUBLISH                  219527          0      |       0       0       0       0   | 15840.07
-MQTT     RECEIVE                  219527          0      |       7       5      16       7   | 15840.07
---------|-------------------------|-----------|----------|------------|--------------------------|--------
-         Aggregated               439084          0      |       3       0     114       0   | 31682.31
+Type     Name                         # reqs      # fails  |     Avg     Min     Max  Median  |   req/s
+--------|----------------------------|-----------|----------|------------|--------------------------|--------
+Redis    1. Push ACL                      10          0      |       5       2      12       4   |    0.33
+MQTT     2. CONNECT                       10          0      |     110     105     118     110   |    0.33
+MQTT     3. SUBSCRIBE                     10          0      |     102     100     108     100   |    0.33
+MQTT     4. PUBLISH                      180          0      |       0       0       1       0   |    6.00
+MQTT     5. RECEIVE                      180          0      |       8       6      14       8   |    6.00
+MQTT     6. CROSS_NODE_PUBLISH            20          0      |       0       0       1       0   |    0.67
+MQTT     7. CROSS_NODE_RECEIVE            20          0      |      12       9      18      12   |    0.67
+--------|----------------------------|-----------|----------|------------|--------------------------|--------
+         Aggregated                      430          0      |       4       0     118       0   |   14.33
 ```
 
 **Key observations**:
 - **10 connections** exactly (one per user)
-- **10 subscriptions** (one per user, established once)
-- **219,527 pub/sub operations** on those 10 persistent connections over 15 seconds
-- **~15,840 messages/sec throughput** with 0% failure rate
+- **10 subscriptions** (one per user, established once for both unique and broadcast topics)
+- **180 same-node pub/sub operations** (users publishing to their own topics)
+- **20 cross-node pub/sub operations** (users publishing to shared broadcast topic)
+- **Cross-node latency** (~12ms avg) slightly higher than same-node latency (~8ms avg)
+- **0% failure rate** for all operations including cross-node routing
+- With default weight=1, ~10% of operations test cross-node routing (20/200 total messages)
 
 ## Cluster Testing Tips
 
@@ -212,6 +233,14 @@ MQTT     RECEIVE                  219527          0      |       7       5      
    ```bash
    uv run locust -f test/locustfile.py --users 50 --spawn-rate 5 --run-time 30m --headless
    ```
+
+5. **Cross-Node Stress Test** (emphasis on inter-node communication)
+   ```bash
+   # Set higher weight for cross-node tests (50% of operations)
+   # Temporarily edit test/.env: CROSS_NODE_TEST_WEIGHT=10
+   uv run locust -f test/load_test.py --users 100 --spawn-rate 10 --run-time 5m --headless
+   ```
+   This scenario heavily tests EMQX's cluster message routing by making half of all operations cross-node.
 
 ### Cluster Validation
 
@@ -269,6 +298,29 @@ Solution: Check Redis is accessible at localhost:6379
 Solution: Ensure ACLs are being created correctly in Redis
 ```
 
+**Issue**: Cross-node test failures or high latency
+```
+Solution:
+1. Verify both EMQX nodes are healthy and in the cluster (check dashboard)
+2. Check Erlang distribution is working: docker exec -it emqx.master emqx_ctl cluster status
+3. Verify nodes can communicate over port 6369 (Erlang distribution)
+4. If testing on single node, disable cross-node tests: ENABLE_CROSS_NODE_TEST=false in test/.env
+```
+
+### Disabling Cross-Node Tests
+
+If you want to test only same-node performance or are running a single-node setup, disable cross-node tests:
+
+```bash
+# Edit test/.env
+ENABLE_CROSS_NODE_TEST=false
+```
+
+Or temporarily disable via command line:
+```bash
+ENABLE_CROSS_NODE_TEST=false uv run locust -f test/load_test.py --config test/locust.conf --headless
+```
+
 ### Debug Mode
 
 Run with verbose logging:
@@ -279,7 +331,8 @@ uv run locust -f test/locustfile.py --loglevel DEBUG --logfile test/debug.log
 
 ## Next Steps
 
-- Extend tests to simulate multi-node client distribution
 - Add custom shapes for ramping load patterns
-- Implement cross-node message delivery tests
+- Add network partition testing (simulate node failures)
+- Implement QoS 1/2 testing for guaranteed message delivery
 - Add monitoring integration (Prometheus, Grafana)
+- Test retained messages across cluster nodes
