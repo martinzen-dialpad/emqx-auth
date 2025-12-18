@@ -32,9 +32,6 @@ services:
     image: emqx/emqx:${EMXQ_VERSION}
     container_name: emqx.master
     ports:
-      - "8083:8083"
-      - "8084:8084"
-      - "8883:8883"
       - "18083:18083"
     environment:
       - EMQX_DASHBOARD__DEFAULT_USER__PASSWORD=Adminadmin0
@@ -64,6 +61,8 @@ services:
   emqx.worker:
     image: emqx/emqx:${EMXQ_VERSION}
     container_name: emqx.worker
+    ports:
+      - "18084:18083"
     environment:
       - EMQX_LOADED_PLUGINS=emqx_recon,emqx_retainer,emqx_management,emqx_web_hook,emqx_rule_engine,emqx_telemetry,emqx_auth_jwt,emqx_auth_redis
       - EMQX_LOG__LEVEL=info
@@ -91,9 +90,11 @@ services:
 
   nginx:
     image: nginx:1.27-alpine
-    container_name: emqx-lb
+    container_name: nginx-waf
     ports:
-      - "1883:1883"    # MQTT load balanced endpoint
+      # - "1883:1883"    # MQTT load balanced endpoint
+      - "8083:8083"    # MQTT over websockets
+      - "8084:8084"
       - "8404:8404"    # NGINX status page
     volumes:
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
@@ -105,5 +106,6 @@ services:
     restart: unless-stopped
 
 networks:
-  emqx-net:
+  default:
+    name: emqx-net
     driver: bridge

@@ -12,7 +12,6 @@ This test simulates a user that:
 """
 
 import os
-import random
 import time
 import uuid
 from datetime import datetime, timedelta, timezone
@@ -32,8 +31,7 @@ load_dotenv('test/.env')
 
 # Configuration
 MQTT_HOST = os.getenv('MQTT_HOST', 'localhost')
-MQTT_PORT = int(os.getenv('MQTT_PORT', '1883'))
-MQTT_WORKER_PORT = int(os.getenv('MQTT_WORKER_PORT', '1884'))
+MQTT_PORT = int(os.getenv('MQTT_PORT', '8083'))
 REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
 REDIS_PORT = int(os.getenv('REDIS_PORT', '6379'))
 JWT_PRIVATE_KEY_PATH = os.getenv('JWT_PRIVATE_KEY_PATH', 'config/jwt_private_key.pem')
@@ -41,12 +39,6 @@ JWT_PRIVATE_KEY_PATH = os.getenv('JWT_PRIVATE_KEY_PATH', 'config/jwt_private_key
 # Load test behavior configuration
 MAX_MESSAGES_PER_USER = int(os.getenv('MAX_MESSAGES_PER_USER', '20'))
 MESSAGE_WAIT_TIME = float(os.getenv('MESSAGE_WAIT_TIME', '0'))  # Seconds between messages (0 = no wait)
-
-# EMQX cluster nodes for load distribution
-EMQX_NODES = [
-    (MQTT_HOST, MQTT_PORT),      # Master node
-    (MQTT_HOST, MQTT_WORKER_PORT) # Worker node
-]
 
 # Load JWT private key
 with open(JWT_PRIVATE_KEY_PATH, 'rb') as key_file:
@@ -90,8 +82,9 @@ class MQTTClient:
         self.username = username
         self.host = host
         self.port = port
-        self.client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id=client_id)
+        self.client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id=client_id, transport="websockets")
         self.client.username_pw_set(username, password)
+        self.client.ws_set_options(path="/mqtt")
 
         self.connected = False
         self.subscribed = False
@@ -379,25 +372,20 @@ class EMQXUser(User):
             raise
 
     def _connect_to_emqx(self):
-        """Connect to EMQX broker with JWT authentication."""
+        """Connect to EMQX broker with JWT authentication via NGINX load balancer."""
         start_time = time.time()
-        selected_host = None
-        selected_port = None
 
         try:
             # Create JWT token
             jwt_token = create_jwt_token(self.username)
 
-            # Randomly select a node from the cluster for load distribution
-            selected_host, selected_port = random.choice(EMQX_NODES)
-
-            # Create MQTT client
+            # Create MQTT client (NGINX will distribute to backend nodes)
             self.mqtt_client = MQTTClient(
                 client_id=self.username,
                 username=self.username,
                 password=jwt_token,
-                host=selected_host,
-                port=selected_port
+                host=MQTT_HOST,
+                port=MQTT_PORT
             )
 
             # Connect
@@ -406,7 +394,7 @@ class EMQXUser(User):
             if not success:
                 # Build detailed error message
                 error_details = [
-                    f"Failed to connect to EMQX at {selected_host}:{selected_port}",
+                    f"Failed to connect to EMQX at {MQTT_HOST}:{MQTT_PORT}",
                     f"Client ID: {self.username}",
                     f"Username: {self.username}",
                 ]
@@ -428,8 +416,8 @@ class EMQXUser(User):
             self._fire_event("MQTT", "2. CONNECT", start_time)
         except Exception as e:
             # Enhance exception message with context if not already detailed
-            if selected_host and selected_port and "Failed to connect to EMQX" not in str(e):
-                enhanced_error = f"Connection error at {selected_host}:{selected_port} for user {self.username}: {str(e)}"
+            if "Failed to connect to EMQX" not in str(e):
+                enhanced_error = f"Connection error at {MQTT_HOST}:{MQTT_PORT} for user {self.username}: {str(e)}"
                 enhanced_exception = Exception(enhanced_error)
             else:
                 enhanced_exception = e
